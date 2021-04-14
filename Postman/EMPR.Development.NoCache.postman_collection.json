@@ -1,0 +1,694 @@
+{
+	"info": {
+		"_postman_id": "79c8208b-f8c8-4f82-95ea-11d7bec271e2",
+		"name": "EMPR.Development.NoCache",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Health",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "70652e10-5abf-40c3-96f1-e1aa12baa8b1",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/health",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Business Priorities",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8d3baecc-717b-4879-93b1-f0cb089a22cd",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/businesspriority/get",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"businesspriority",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Add Business Priority",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"MobileBusinessId\": 18,\r\n    \"Priorities\": [\r\n        {\r\n            \"PriorityNumber\": 1,\r\n            \"PlatformObjectiveId\": 5\r\n        },\r\n        {\r\n            \"PriorityNumber\": 2,\r\n            \"PlatformObjectiveId\": 4\r\n        },\r\n        {\r\n            \"PriorityNumber\": 3,\r\n            \"PlatformObjectiveId\": 3\r\n        },\r\n        {\r\n            \"PriorityNumber\": 4,\r\n            \"PlatformObjectiveId\": 2\r\n        },\r\n        {\r\n            \"PriorityNumber\": 5,\r\n            \"PlatformObjectiveId\": 1\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/businesspriority/add",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"businesspriority",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Platform Screen Colors",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "47bdd5ba-6676-4605-80f5-c7e003d2e554",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/platformscreencolors/get",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"platformscreencolors",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Platform Screen Themes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d1a77d78-e331-4982-8a5b-7b07324fdf31",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/platformthemes/get",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"platformthemes",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update Platform Themes",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"MobileBusinessId\": 1,\r\n    \"SelectedColorFk\": 1,\r\n    \"SelectedThemeFk\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/platformthemes/update",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"platformthemes",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update Platform Screen Colors",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"MobileBusinessId\": 1,\r\n    \"SelectedColorFk\": 1,\r\n    \"SelectedThemeFk\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/platformscreencolors/update",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"platformscreencolors",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Country Area Codes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/countrycodes/get",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"countrycodes",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Business Categories",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "880624d9-eca6-49a5-afca-6076dd54545e",
+						"exec": [
+							"\r",
+							"pm.test(\"The response has all properties\", () => {\r",
+							"    //parse the response json and test three properties\r",
+							"    const responseJson = pm.response.json();\r",
+							"    pm.expect(responseJson.type).to.eql('vip');\r",
+							"    pm.expect(responseJson.name).to.be.a('string');\r",
+							"    pm.expect(responseJson.id).to.have.lengthOf(1);\r",
+							"});\r",
+							"\r",
+							"[\r",
+							"    {\r",
+							"        \"id\": 11,\r",
+							"        \"name\": \"Krishna Rungta\",\r",
+							"        \"username\": \"Bret\",\r",
+							"        \"email\": \"Sincere@april.biz\",\r",
+							"        \"address\": {\r",
+							"            \"street\": \"Kulas Light\",\r",
+							"            \"suite\": \"Apt. 556\",\r",
+							"            \"city\": \"Gwenborough\",\r",
+							"            \"zipcode\": \"92998-3874\",\r",
+							"            \"geo\": {\r",
+							"                \"lat\": \"-37.3159\",\r",
+							"                \"lng\": \"81.1496\"\r",
+							"            }\r",
+							"        },\r",
+							"        \"phone\": \"1-770-736-8031 x56442\",\r",
+							"        \"website\": \"hildegard.org\",\r",
+							"        \"company\": {\r",
+							"            \"name\": \"Romaguera-Crona\",\r",
+							"            \"catchPhrase\": \"Multi-layered client-server neural-net\",\r",
+							"            \"bs\": \"harness real-time e-markets\"\r",
+							"        }\r",
+							"    }\r",
+							"]"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/businesscategories/get/all",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"businesscategories",
+						"get",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Check Mobile Business Name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"OrganizationName\": \"Bob's Burgers\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/check",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Check Mobile Business Name 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"OrganizationName\": \"Bob's Burgers\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/businessname/check",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"businessname",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/countries/get/all",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"countries",
+						"get",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All States or Provinces",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/states/get/189",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"states",
+						"get",
+						"189"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Edit Mobile Business Category",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"MobileBusinessId\": 1,\r\n    \"MobileBusinessBusinessCategory\": [\r\n        {\r\n            \"BusinessCategoryFk\": 1,\r\n            \"OfferMode\": \"S\"\r\n        },\r\n        {\r\n            \"BusinessCategoryFk\": 1,\r\n            \"OfferMode\": \"S\"\r\n        },\r\n        {\r\n            \"BusinessCategoryFk\": 8,\r\n            \"OfferMode\": \"S\"\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/businesscategory/edit",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"businesscategory",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Add Mobile Business Address Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"MobileBusinessId\": \"157\",\r\n\"AddressLine1\": \"TestLine112t6r22fgfghfgdfgdfg2fffkjjfghfghfgh\",\r\n\"AddressLine2\": \"TestLine21rty2322fghfgh2\",\r\n\"AddressLine3\": \"TestLinerr334\",\r\n\"City\": \"Dallas\",\r\n\"StatePostalCode\": \"TX\",\r\n\"ZipCode\": \"77771\",\r\n\"BusinessUrl\": \"www.empr.co\",\r\n\"ServiceAreaBracketId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/address/add",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"address",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Service Area Brackets Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d02acb7c-5984-4a7a-b039-09f79f789a5d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/serviceareabrackets/get",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"serviceareabrackets",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Transaction Size Brackets",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "17b7443e-43bc-4f77-8d1c-f34f9236e077",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/transactionsizebrackets/get",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"transactionsizebrackets",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Transactions per Month Brackets",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e8c83010-47e4-4a11-8dff-596c04a7ef04",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/transactionspermonthbrackets/get",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"transactionspermonthbrackets",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Monthly Volume Brackets",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e317864e-b5be-4892-9fa0-97b9774d1852",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/monthlyvolumebrackets/get",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"monthlyvolumebrackets",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Add Monthly Sales Data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"MobileBusinessId\": \"18\",\r\n\"MonthlyVolumeBracketFk\": 2,\r\n\"TransactionsPerMonthBracketFk\" : 1,\r\n\"TransactionsSizeBracketFk\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/owner/monthlysales/update",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"owner",
+						"monthlysales",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "95a8aab6-00b2-47ef-a14c-027268261be2",
+			"key": "LocalhostUrl",
+			"value": "https://localhost:44327/"
+		},
+		{
+			"id": "7bb18916-a665-4793-a3c8-cead2ac932e7",
+			"key": "DevelopmentUrl",
+			"value": "https://coreservicesapi.azurewebsites.net"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

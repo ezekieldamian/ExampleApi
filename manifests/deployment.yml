@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "revyvvdevqa-272f"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "revyvvdevqa-272f"
+  template:
+    metadata:
+      labels:
+        app: "revyvvdevqa-272f"
+    spec:
+      containers:
+        - name: "revyvvdevqa-272f"
+          image: "emprdevreg.azurecr.io/revyvvdevqa"
+          ports:
+          - containerPort: 80

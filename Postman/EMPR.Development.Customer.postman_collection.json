@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "881c4585-2a9e-423b-be2f-195d3acf8984",
+		"name": "EMPR.Development.Customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Business Priorities",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d50a31cf-5d88-4e54-9320-af5539dcc8c8",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coreservicedevedge.empr.co/api/customer/businesspriority/get",
+					"protocol": "https",
+					"host": [
+						"coreservicedevedge",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"customer",
+						"businesspriority",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Add Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PlatformPassword\": \"password12345\",\r\n    \"MobileBusinessFk\": \"18\",\r\n    \"Person\":\r\n    {\r\n      \"FullName\":\"Test T2r\" \r\n    },\r\n      \"Contact\" :\r\n      {\r\n            \"EmailAddress\" : {\r\n                \"Email\" : \"noel.tiscareno@hotmail.com\",\r\n                \"EmailTypeCode\" : \"P\"\r\n            }\r\n      }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coreservicedevedge.empr.co/api/customer/platformuser/signup",
+					"protocol": "https",
+					"host": [
+						"coreservicedevedge",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"customer",
+						"platformuser",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Add Business Priority",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"MobileBusinessId\": 18,\r\n    \"Priorities\": [\r\n        {\r\n            \"PriorityNumber\": 1,\r\n            \"PlatformObjectiveId\": 5\r\n        },\r\n        {\r\n            \"PriorityNumber\": 2,\r\n            \"PlatformObjectiveId\": 4\r\n        },\r\n        {\r\n            \"PriorityNumber\": 3,\r\n            \"PlatformObjectiveId\": 3\r\n        },\r\n        {\r\n            \"PriorityNumber\": 4,\r\n            \"PlatformObjectiveId\": 2\r\n        },\r\n        {\r\n            \"PriorityNumber\": 5,\r\n            \"PlatformObjectiveId\": 1\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coreservicedevedge.empr.co/api/customer/businesspriority/add",
+					"protocol": "https",
+					"host": [
+						"coreservicedevedge",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"customer",
+						"businesspriority",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,1788 @@
+{
+	"info": {
+		"_postman_id": "65cbf493-5dfd-4402-98a7-5bb113d866a4",
+		"name": "EMPR.Local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET HealthCheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54590/api/admin/healthcheck",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"admin",
+						"healthcheck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54590/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Businesses",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJGNjRFNTA3MS1CRDk2LTQ3RkQtQUI5NC1FNzNEMDJCNTlBNUMiLCJ1bmlxdWVfbmFtZSI6ImVlcmVyZXJ3cndlckBnbWFpbC5jb20iLCJyb2xlIjoiQURNIiwibmJmIjoxNjA4NTY0MjczLCJleHAiOjE2MDg1Njc4NzMsImlhdCI6MTYwODU2NDI3MywiaXNzIjoiaHR0cHM6Ly9lbXByLmNvIiwiYXVkIjoiaHR0cHM6Ly9jb3Jlc2VydmljZXNkZXYuZW1wci5jby8ifQ.DF1tZys5fKem7JlOG_az6gY7ETeerRWiDUSniTBcvZkA9FUFOtxVMOucPv4W42PTwZzVKOGFuWcMajztYCc9dQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:54590/api/businesses/get/all?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"businesses",
+						"get",
+						"all"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Username\": \"eerererwrwer@gmail.com\",\r\n    \"Password\": \"password12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54590/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Username\": \"ezekieldamian23763@gmail.com\",\r\n    \"Password\": \"password12345\",\r\n    \"FullName\": \"Ezekiel D. Gallardo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54590/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJGNjRFNTA3MS1CRDk2LTQ3RkQtQUI5NC1FNzNEMDJCNTlBNUMiLCJ1bmlxdWVfbmFtZSI6ImVlcmVyZXJ3cndlckBnbWFpbC5jb20iLCJyb2xlIjoiQURNIiwibmJmIjoxNjA4MzIwNDg0LCJleHAiOjE2MDg0MDY4ODQsImlhdCI6MTYwODMyMDQ4NH0.wfcRawjZlgbovIeHaOE3LMcnhzR2T1jl8G2daAt_QvPMD2PLqAy57vj2ViKb1o9QXd9LoSts9cLlpv-kR8dwQA\",\r\n    \"refreshToken\": \"12324\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54590/api/auth/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Countries",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIzODlCMjVENy0zMjYyLTQ2RTQtQkUwRS1FM0UyREY4MUI3NDQiLCJ1bmlxdWVfbmFtZSI6ImV6ZWtpZWxkYW1pYW4yMzY4Nzc1Z2c2NjU3NjNAZ21haWwuY29tIiwicm9sZSI6Ik9XTiIsIlBhcnR5SWQiOiIzMEMxQzM5RC1GQjlBLTRBM0ItQTAwNi0wNTlGMTU3N0I1RjEiLCJuYmYiOjE2MDgyNDgzNDIsImV4cCI6MTYwODMzNDc0MiwiaWF0IjoxNjA4MjQ4MzQyfQ.7krSkKMWYaQr8bVOKnPKkIy7XiO-yhTFDgpHGwy8yu6kMMoks0gfs05kIFhpnchB269FWPEYmCWMvEufFTOz9A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:54590/api/owner/countries/get/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"countries",
+						"get",
+						"all"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Country Codes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54590/api/owner/countrycodes/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"countrycodes",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All States or Provinces",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54590/api/owner/states/get/189",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"states",
+						"get",
+						"189"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Business Categories",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"The response has all properties\", () => {\r",
+							"    //parse the response json and test three properties\r",
+							"    const responseJson = pm.response.json();\r",
+							"    pm.expect(responseJson.type).to.eql('vip');\r",
+							"    pm.expect(responseJson.name).to.be.a('string');\r",
+							"    pm.expect(responseJson.id).to.have.lengthOf(1);\r",
+							"});\r",
+							"\r",
+							"[\r",
+							"    {\r",
+							"        \"id\": 11,\r",
+							"        \"name\": \"Krishna Rungta\",\r",
+							"        \"username\": \"Bret\",\r",
+							"        \"email\": \"Sincere@april.biz\",\r",
+							"        \"address\": {\r",
+							"            \"street\": \"Kulas Light\",\r",
+							"            \"suite\": \"Apt. 556\",\r",
+							"            \"city\": \"Gwenborough\",\r",
+							"            \"zipcode\": \"92998-3874\",\r",
+							"            \"geo\": {\r",
+							"                \"lat\": \"-37.3159\",\r",
+							"                \"lng\": \"81.1496\"\r",
+							"            }\r",
+							"        },\r",
+							"        \"phone\": \"1-770-736-8031 x56442\",\r",
+							"        \"website\": \"hildegard.org\",\r",
+							"        \"company\": {\r",
+							"            \"name\": \"Romaguera-Crona\",\r",
+							"            \"catchPhrase\": \"Multi-layered client-server neural-net\",\r",
+							"            \"bs\": \"harness real-time e-markets\"\r",
+							"        }\r",
+							"    }\r",
+							"]"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54590/api/owner/businesscategories/get/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"businesscategories",
+						"get",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Goods Business Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54590/api/owner/businesscategories/get/goods",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"businesscategories",
+						"get",
+						"goods"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Services Business Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54590/api/owner/businesscategories/get/services",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"businesscategories",
+						"get",
+						"services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Assetss Business Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54590/api/owner/businesscategories/get/assets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"businesscategories",
+						"get",
+						"assets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Business by Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"The response has all properties\", () => {\r",
+							"    //parse the response json and test three properties\r",
+							"    const responseJson = pm.response.json();\r",
+							"    pm.expect(responseJson.type).to.eql('vip');\r",
+							"    pm.expect(responseJson.name).to.be.a('string');\r",
+							"    pm.expect(responseJson.id).to.have.lengthOf(1);\r",
+							"});\r",
+							"\r",
+							"[\r",
+							"    {\r",
+							"        \"id\": 11,\r",
+							"        \"name\": \"Krishna Rungta\",\r",
+							"        \"username\": \"Bret\",\r",
+							"        \"email\": \"Sincere@april.biz\",\r",
+							"        \"address\": {\r",
+							"            \"street\": \"Kulas Light\",\r",
+							"            \"suite\": \"Apt. 556\",\r",
+							"            \"city\": \"Gwenborough\",\r",
+							"            \"zipcode\": \"92998-3874\",\r",
+							"            \"geo\": {\r",
+							"                \"lat\": \"-37.3159\",\r",
+							"                \"lng\": \"81.1496\"\r",
+							"            }\r",
+							"        },\r",
+							"        \"phone\": \"1-770-736-8031 x56442\",\r",
+							"        \"website\": \"hildegard.org\",\r",
+							"        \"company\": {\r",
+							"            \"name\": \"Romaguera-Crona\",\r",
+							"            \"catchPhrase\": \"Multi-layered client-server neural-net\",\r",
+							"            \"bs\": \"harness real-time e-markets\"\r",
+							"        }\r",
+							"    }\r",
+							"]"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIzODNCRjYzRC1GNTY1LTQ3MjUtQTAyNy02QUYzMjM2MjFDMUUiLCJ1bmlxdWVfbmFtZSI6ImV6ZWtpZWxkYW1pYW4yMzY4Nzc1NjY1NzYzQGdtYWlsLmNvbSIsInJvbGUiOiJPV04iLCJQYXJ0eUlkIjoiMzBDMUMzOUQtRkI5QS00QTNCLUEwMDYtMDU5RjE1NzdCNUYxIiwibmJmIjoxNjA3ODg5NzE4LCJleHAiOjE2MDc5NzYxMTgsImlhdCI6MTYwNzg4OTcxOH0.E6qZIyxW-zPlPIEh_tzqgI5WTaVaRkjUU9ca5op-QOPCsofU5GYwfl2XHxe6gvqfuqLt83e8au2HW3L7PgJ0Pw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:54590/api/businesses/get/30C1C39D-FB9A-4A3B-A006-059F1577B5F1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"businesses",
+						"get",
+						"30C1C39D-FB9A-4A3B-A006-059F1577B5F1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Business Priorities",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54590/api/owner/businesspriority/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"businesspriority",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Service Area Brackets",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54590/api/owner/businesspriority/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"businesspriority",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Transaction Size Brackets",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54590/api/owner/transactionsizebrackets/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"transactionsizebrackets",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Transactions per Month Brackets",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54590/api/owner/transactionspermonthbrackets/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"transactionspermonthbrackets",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Monthly Volume Brackets",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54590/api/owner/monthlyvolumebrackets/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"monthlyvolumebrackets",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Number of Customers Brackets",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54590/api/owner/numberofcustomersbrackets/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"numberofcustomersbrackets",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Platform Screen Colors",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54590/api/owner/platformscreencolors/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"platformscreencolors",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Platform Screen Themes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:54590/api/owner/monthlyvolumebrackets/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"monthlyvolumebrackets",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Employee Contact Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44360/api/employee/contactdetails/get/59",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"api",
+						"employee",
+						"contactdetails",
+						"get",
+						"59"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Bank Account Info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"MobileBusinessId\":\"91\",\r\n \"MobileBusinessNavigation\":\r\n {\r\n \"OrganizationName\":\"Updated Org Test\",\r\n \"Ein\":\"abcdefgh\"\r\n },\r\n\r\n \"OwnerFkNavigation\":\r\n {\r\n     \"PersonNavigation\": \r\n    {\r\n         \"PartyId\":\"90\",\r\n         \"PartyBankAccount\":\r\n         [{\r\n             \"PartyFk\":\"90\",\r\n             \"RoutingNumber\": \"111111111\",\r\n             \"AccountNumber\": \"123456789876\"\r\n         }]\r\n    }\r\n }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44360/api/owner/bankaccount/get/D97B56A5-B7B4-4D24-9896-38475CBBD5E8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"api",
+						"owner",
+						"bankaccount",
+						"get",
+						"D97B56A5-B7B4-4D24-9896-38475CBBD5E8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Customer Contact Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44360/api/customer/contactdetails/get/59",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"api",
+						"customer",
+						"contactdetails",
+						"get",
+						"59"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Owner Contact Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJGNjRFNTA3MS1CRDk2LTQ3RkQtQUI5NC1FNzNEMDJCNTlBNUMiLCJ1bmlxdWVfbmFtZSI6ImVlcmVyZXJ3cndlckBnbWFpbC5jb20iLCJyb2xlIjoiT1dOIiwibmJmIjoxNjA4NjU1NTkxLCJleHAiOjE2MDg2NTkxOTEsImlhdCI6MTYwODY1NTU5MSwiaXNzIjoiaHR0cHM6Ly9lbXByLmNvIiwiYXVkIjoiaHR0cHM6Ly9jb3Jlc2VydmljZXNkZXYuZW1wci5jby8ifQ.BK-rLqqPk-ZELSZOkEdB9m9nyBxt0KhALSUS-As3hozalr3krlyplMsJhVlL5OV3Dj3k1GCzHSH1Da2PMGgkJg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44360/api/owner/contactdetails/get/@noel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"api",
+						"owner",
+						"contactdetails",
+						"get",
+						"@noel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Business",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"mobile_business_id\": 1,\r\n    \"organization_name\": \"Something cool\",\r\n    \"offers_goods_flag\": \"Y\",\r\n    \"offers_services_flag\": \"Y\",\r\n    \"offers_assets_flag\": \"N\",\r\n    \"ships_goods_flag\": \"N\",\r\n    \"accepts_credit_card_flag\": \"N\",\r\n    \"accepts_ach_flag\": \"N\",\r\n    \"monthly_volume_bracket_fk\": null,\r\n    \"transactions_per_month_bracket_fk\": null,\r\n    \"transactions_size_bracket_fk\": null,\r\n    \"selected_theme_fk\": null,\r\n    \"selected_color_fk\": null,\r\n    \"headquarters_address_line_1\": null,\r\n    \"headquarters_address_line_2\": null,\r\n    \"headquarters_address_line_3\": null,\r\n    \"headquarters_city\": null,\r\n    \"headquarters_state_postal_code\": null,\r\n    \"headquarters_zip_code\": null\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44360/api/businesses/delete/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"api",
+						"businesses",
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Edit Mobile Business",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"MobileBusinessId\": 33,\r\n    \"OwnerTitle\": \"Owner\",\r\n    \"DefaultTradeRadiusInMiles\": null,\r\n    \"OffersGoodsFlag\": \"N\",\r\n    \"OffersServicesFlag\": \"N\",\r\n    \"OffersAssetsFlag\": \"N\",\r\n    \"ShipsGoodsFlag\": \"N\",\r\n    \"AcceptsCreditCardFlag\": \"N\",\r\n    \"AcceptsAchFlag\": \"N\",\r\n    \"BusinessUrl\": null,\r\n    \"MobileBusinessNavigation\": {\r\n        \"OrganizationName\": \"Bob's Burgers\",\r\n        \"NonProfitFlag\": \"N\"                \r\n    },\r\n    \"MobileBusinessBusinessCategory\": [\r\n        {\r\n            \"BusinessCategoryFk\": 3,\r\n            \"OfferMode\": \"G\"\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44360/api/businesses/edit/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"api",
+						"businesses",
+						"edit",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Edit Owner Mobile Business",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"ShipsGoodsFlag\": \"Y\",\r\n    \"AcceptsCreditCardFlag\": \"Y\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44360/api/owner/business/update/78",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"api",
+						"owner",
+						"business",
+						"update",
+						"78"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Edit Mobile Business Category",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"MobileBusinessId\": 18,\r\n    \"MobileBusinessBusinessCategory\": [\r\n        {\r\n            \"BusinessCategoryFk\": 1,\r\n            \"OfferMode\": \"S\"\r\n        },\r\n        {\r\n            \"BusinessCategoryFk\": 1,\r\n            \"OfferMode\": \"S\"\r\n        },\r\n        {\r\n            \"BusinessCategoryFk\": 8,\r\n            \"OfferMode\": \"S\"\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44360/api/owner/businesscategory/edit",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"api",
+						"owner",
+						"businesscategory",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Add Mobile Business Category Goods",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"MobileBusinessId\": 18,\r\n    \"MobileBusinessBusinessCategory\": [\r\n        {\r\n            \"BusinessCategoryFk\": 1,\r\n            \"OfferMode\": \"S\"\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44360/api/owner/businesscategory/add/assets",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"api",
+						"owner",
+						"businesscategory",
+						"add",
+						"assets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Add Monthly Sales Data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"MobileBusinessId\": \"18\",\r\n\"MonthlyVolumeBracketFk\": 2,\r\n\"TransactionsPerMonthBracketFk\" : 1,\r\n\"TransactionsSizeBracketFk\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54590/api/owner/monthlysales/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"monthlysales",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Add Business Priority",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"MobileBusinessId\": 18,\r\n    \"Priorities\": [\r\n        {\r\n            \"PriorityNumber\": 1,\r\n            \"PlatformObjectiveId\": 5\r\n        },\r\n        {\r\n            \"PriorityNumber\": 2,\r\n            \"PlatformObjectiveId\": 4\r\n        },\r\n        {\r\n            \"PriorityNumber\": 3,\r\n            \"PlatformObjectiveId\": 3\r\n        },\r\n        {\r\n            \"PriorityNumber\": 4,\r\n            \"PlatformObjectiveId\": 2\r\n        },\r\n        {\r\n            \"PriorityNumber\": 5,\r\n            \"PlatformObjectiveId\": 1\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54590/api/owner/businesspriority/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"businesspriority",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update Platform Themes",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"MobileBusinessId\": 18,\r\n    \"SelectedColorFk\": 1,\r\n    \"SelectedThemeFk\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54590/api/owner/platformthemes/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"platformthemes",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update Platform Screen Colors",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"MobileBusinessId\": 18,\r\n    \"SelectedColorFk\": 1,\r\n    \"SelectedThemeFk\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54590/api/owner/platformscreencolors/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"platformscreencolors",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Customer Business Priority",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"MobileBusinessId\": 18,\r\n    \"Priorities\": [\r\n        {\r\n            \"PriorityNumber\": 1,\r\n            \"PlatformObjectiveId\": 5\r\n        },\r\n        {\r\n            \"PriorityNumber\": 2,\r\n            \"PlatformObjectiveId\": 4\r\n        },\r\n        {\r\n            \"PriorityNumber\": 3,\r\n            \"PlatformObjectiveId\": 3\r\n        },\r\n        {\r\n            \"PriorityNumber\": 4,\r\n            \"PlatformObjectiveId\": 2\r\n        },\r\n        {\r\n            \"PriorityNumber\": 5,\r\n            \"PlatformObjectiveId\": 1\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44360/api/customer/businesspriority/add\n",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"api",
+						"customer",
+						"businesspriority",
+						"add\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Add Edit Bank Account Info",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"Ein\":\"abcdefgh\",\r\n  \"PartyBankAccount\":\r\n  {\r\n      \"RoutingNumber\": \"444444444\",\r\n      \"AccountNumber\": \"123456789876\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44360/api/owner/bankaccount/update/22C0D189-FAC0-41E6-9CF4-FAA4D1A75C67",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"api",
+						"owner",
+						"bankaccount",
+						"update",
+						"22C0D189-FAC0-41E6-9CF4-FAA4D1A75C67"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Employee Contact Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"MobileBusinessId\":\"87\",\r\n    \"OwnerFkNavigation\":{\r\n       \"PersonId\":\"59\",\r\n       \"PlatformUserName\":\"@noel\",\r\n       \"FullName\":\"Noel RT\",\r\n       \"PlatformSmartphoneNumber\":\"8175643322\",\r\n       \"PrimaryContactMechanismFk\":\"\",\r\n       \"PrimaryContactMechanismFkNavigation\":\r\n       {\r\n           \"Uuid\":\"5daebaac-a563-4483-9f0d-c2bf2f8ed024\",\r\n           \"PostOfficeAddress\" : \r\n           {\r\n             \"AddressType\":\"P\",\r\n             \"AddressLine1\":\"Line Test 1\", \r\n             \"AddressLine2\":\"Line Test 2\", \r\n             \"AddressLine3\":\"Line Test 3\", \r\n             \"City\":\"Dallas\",\r\n             \"StatePostalCode\":\"TX\",\r\n             \"ZipCode\":\"76111\"\r\n           },\r\n           \"EmailAddress\":\r\n           {\r\n           \"Email\":\"noel@empr.co\",\r\n           \"EmailTypeCode\":\"P\"\r\n           }\r\n       }\r\n\r\n       }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44360/api/employee/contactdetails/edit",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"api",
+						"employee",
+						"contactdetails",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Customer Contact Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"MobileBusinessId\":\"87\",\r\n    \"OwnerFkNavigation\":{\r\n       \"PersonId\":\"59\",\r\n       \"PlatformUserName\":\"@noel\",\r\n       \"FullName\":\"Noel RT\",\r\n       \"PlatformSmartphoneNumber\":\"8175643322\",\r\n       \"PrimaryContactMechanismFk\":\"\",\r\n       \"PrimaryContactMechanismFkNavigation\":\r\n       {\r\n           \"Uuid\":\"5daebaac-a563-4483-9f0d-c2bf2f8ed024\",\r\n           \"PostOfficeAddress\" : \r\n           {\r\n             \"AddressType\":\"P\",\r\n             \"AddressLine1\":\"Line Test 1\", \r\n             \"AddressLine2\":\"Line Test 2\", \r\n             \"AddressLine3\":\"Line Test 3\", \r\n             \"City\":\"Dallas\",\r\n             \"StatePostalCode\":\"TX\",\r\n             \"ZipCode\":\"76111\"\r\n           },\r\n           \"EmailAddress\":\r\n           {\r\n           \"Email\":\"noel@empr.co\",\r\n           \"EmailTypeCode\":\"P\"\r\n           }\r\n       }\r\n\r\n       }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44360/api/customer/contactdetails/edit",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"api",
+						"customer",
+						"contactdetails",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Owner Contact Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJGNjRFNTA3MS1CRDk2LTQ3RkQtQUI5NC1FNzNEMDJCNTlBNUMiLCJ1bmlxdWVfbmFtZSI6ImVlcmVyZXJ3cndlckBnbWFpbC5jb20iLCJyb2xlIjoiT1dOIiwiUGFydHlJZCI6IjIyQzBEMTg5LUZBQzAtNDFFNi05Q0Y0LUZBQTREMUE3NUM2NyIsIm5iZiI6MTYwODY1OTE2OSwiZXhwIjoxNjA4NjYyNzY5LCJpYXQiOjE2MDg2NTkxNjksImlzcyI6Imh0dHBzOi8vZW1wci5jbyIsImF1ZCI6Imh0dHBzOi8vY29yZXNlcnZpY2VzZGV2LmVtcHIuY28vIn0.YvkbkZKV_TxJXwNfb_wFAB8TXNFjZqa8VBgLPD5Boj0Ulux2GLn7CS37wZh7C3U_yWfi_t0vUcGO_RIaRqDMBQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"MobileBusinessId\":\"87\",\r\n    \"OwnerFkNavigation\":{\r\n       \"PersonId\":\"59\",\r\n       \"PlatformUserName\":\"@noel\",\r\n       \"FullName\":\"Noel RT\",\r\n       \"PlatformSmartphoneNumber\":\"8175643322\",\r\n       \"PrimaryContactMechanismFk\":\"\",\r\n       \"PrimaryContactMechanismFkNavigation\":\r\n       {\r\n           \"Uuid\":\"5daebaac-a563-4483-9f0d-c2bf2f8ed024\",\r\n           \"PostOfficeAddress\" : \r\n           {\r\n             \"AddressType\":\"P\",\r\n             \"AddressLine1\":\"Line Test 1\", \r\n             \"AddressLine2\":\"Line Test 2\", \r\n             \"AddressLine3\":\"Line Test 3\", \r\n             \"City\":\"Dallas\",\r\n             \"StatePostalCode\":\"TX\",\r\n             \"ZipCode\":\"76111\"\r\n           },\r\n           \"EmailAddress\":\r\n           {\r\n           \"Email\":\"noel@empr.co\",\r\n           \"EmailTypeCode\":\"P\"\r\n           }\r\n       }\r\n\r\n       }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44360/api/owner/contactdetails/edit",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"api",
+						"owner",
+						"contactdetails",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Add Create Mobile Business",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIzODlCMjVENy0zMjYyLTQ2RTQtQkUwRS1FM0UyREY4MUI3NDQiLCJ1bmlxdWVfbmFtZSI6ImV6ZWtpZWxkYW1pYW4yMzY4Nzc1Z2c2NjU3NjNAZ21haWwuY29tIiwicm9sZSI6Ik9XTiIsIlBhcnR5SWQiOiIzMEMxQzM5RC1GQjlBLTRBM0ItQTAwNi0wNTlGMTU3N0I1RjEiLCJuYmYiOjE2MDgyNDgzNDIsImV4cCI6MTYwODMzNDc0MiwiaWF0IjoxNjA4MjQ4MzQyfQ.7krSkKMWYaQr8bVOKnPKkIy7XiO-yhTFDgpHGwy8yu6kMMoks0gfs05kIFhpnchB269FWPEYmCWMvEufFTOz9A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"OwnerTitle\": \"Owner154\",\r\n    \"DefaultTradeRadiusInMiles\": null,\r\n    \"OffersGoodsFlag\": \"N\",\r\n    \"OffersServicesFlag\": \"N\",\r\n    \"OffersAssetsFlag\": \"N\",\r\n    \"ShipsGoodsFlag\": \"N\",\r\n    \"AcceptsCreditCardFlag\": \"N\",\r\n    \"AcceptsAchFlag\": \"N\",\r\n    \"BusinessUrl\": null,\r\n    \"MobileBusinessNavigation\": {\r\n        \"OrganizationName\": \"Noel's Tanning Salhyhyohh666gffhjhh777\",\r\n        \"NonProfitFlag\": \"N\"                \r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54590/api/businesses/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"businesses",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Add Create Mobile Business For Existing User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJGNjRFNTA3MS1CRDk2LTQ3RkQtQUI5NC1FNzNEMDJCNTlBNUMiLCJ1bmlxdWVfbmFtZSI6ImVlcmVyZXJ3cndlckBnbWFpbC5jb20iLCJyb2xlIjoiT1dOIiwibmJmIjoxNjA4MzEyNTc1LCJleHAiOjE2MDgzOTg5NzQsImlhdCI6MTYwODMxMjU3NX0.onQ-dn7JikQ_zE9tq-DpuSkpiT5N5dDr6EVfrUFlsfu0L8ZiVmusJ7gCKQsSPX6Jnc2_b0vLg19ZH-1AAkF7bg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"OwnerTitle\": \"Owner154\",\r\n    \"DefaultTradeRadiusInMiles\": null,\r\n    \"OffersGoodsFlag\": \"N\",\r\n    \"OffersServicesFlag\": \"N\",\r\n    \"OffersAssetsFlag\": \"N\",\r\n    \"ShipsGoodsFlag\": \"N\",\r\n    \"AcceptsCreditCardFlag\": \"N\",\r\n    \"AcceptsAchFlag\": \"N\",\r\n    \"BusinessUrl\": null,\r\n    \"MobileBusinessNavigation\": {\r\n        \"OrganizationName\": \"Noel's Tanning Salh;;;yhyosdfdtyryrtsfdshh666gffhjhh777\",\r\n        \"NonProfitFlag\": \"N\"                \r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54590/api/owner/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Check Mobile Business Name",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIzODNCRjYzRC1GNTY1LTQ3MjUtQTAyNy02QUYzMjM2MjFDMUUiLCJ1bmlxdWVfbmFtZSI6ImV6ZWtpZWxkYW1pYW4yMzY4Nzc1NjY1NzYzQGdtYWlsLmNvbSIsInJvbGUiOiJPV04iLCJQYXJ0eUlkIjoiMzBDMUMzOUQtRkI5QS00QTNCLUEwMDYtMDU5RjE1NzdCNUYxIiwibmJmIjoxNjA3ODg5NzE4LCJleHAiOjE2MDc5NzYxMTgsImlhdCI6MTYwNzg4OTcxOH0.E6qZIyxW-zPlPIEh_tzqgI5WTaVaRkjUU9ca5op-QOPCsofU5GYwfl2XHxe6gvqfuqLt83e8au2HW3L7PgJ0Pw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"OrganizationName\": \"Bob'sghh Burgers\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54590/api/owner/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Save Image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "image/jpeg",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIzODNCRjYzRC1GNTY1LTQ3MjUtQTAyNy02QUYzMjM2MjFDMUUiLCJ1bmlxdWVfbmFtZSI6ImV6ZWtpZWxkYW1pYW4yMzY4Nzc1NjY1NzYzQGdtYWlsLmNvbSIsInJvbGUiOiJPV04iLCJQYXJ0eUlkIjoiMzBDMUMzOUQtRkI5QS00QTNCLUEwMDYtMDU5RjE1NzdCNUYxIiwibmJmIjoxNjA3ODg5NzE4LCJleHAiOjE2MDc5NzYxMTgsImlhdCI6MTYwNzg4OTcxOH0.E6qZIyxW-zPlPIEh_tzqgI5WTaVaRkjUU9ca5op-QOPCsofU5GYwfl2XHxe6gvqfuqLt83e8au2HW3L7PgJ0Pw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/EzekielGallardo/Downloads/gitflow.jpg"
+						},
+						{
+							"key": "businessId",
+							"value": "18",
+							"type": "text"
+						},
+						{
+							"key": "businessName",
+							"value": "Test",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54590/api/owner/logo/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"logo",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Data Lake Save Image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/EzekielGallardo/Downloads/gitflow.jpg"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://revyvvetldev.azurewebsites.net/data_api/data_services/business_logo_upload?business_id=18&business_name=Test",
+					"protocol": "http",
+					"host": [
+						"revyvvetldev",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"data_api",
+						"data_services",
+						"business_logo_upload"
+					],
+					"query": [
+						{
+							"key": "business_id",
+							"value": "18"
+						},
+						{
+							"key": "business_name",
+							"value": "Test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Data Lake Save Image With Caching",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/EzekielGallardo/Downloads/gitflow.jpg"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://dataservicesdev.empr.co/data_api/data_services/business_logo_upload?business_id=18&business_name=Test",
+					"protocol": "http",
+					"host": [
+						"dataservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"data_api",
+						"data_services",
+						"business_logo_upload"
+					],
+					"query": [
+						{
+							"key": "business_id",
+							"value": "18"
+						},
+						{
+							"key": "business_name",
+							"value": "Test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Add Mobile Business Address",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"MobileBusinessId\": \"10034\",\r\n\"AddressLine1\": \"TestLine112t6r22fgfghfgdfgdfg2ffffghfghfgh\",\r\n\"AddressLine2\": \"TestLine21rty2322fghfgh2\",\r\n\"AddressLine3\": \"TestLinerr334\",\r\n\"City\": \"Dallas\",\r\n\"StatePostalCode\": \"TX\",\r\n\"ZipCode\": \"77771\",\r\n\"BusinessUrl\": \"www.empr.co\",\r\n\"DefaultTradeRadiusInMiles\": \"13\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54590/api/owner/address/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"address",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Add Goods",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"MobileBusinessFk\" : 31,\r\n    \"TextDescription\" : \"Test\",\r\n    \"MinimumPrice\" : 10,\r\n    \"MaximumPrice\" : 50,\r\n    \"ProfessionalService\": {\r\n        \"ExpectedDurationInMinutes\" : \"20\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54590/api/owner/goods/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"goods",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Add Services",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"MobileBusinessId\" : 31,\r\n    \"Products\": [\r\n        {\r\n            \"TextDescription\" : \"Tesqqqt\",\r\n            \"MinimumPrice\" : 10,\r\n            \"MaximumPrice\" : 50,\r\n            \"Service\": {\r\n                \"ExpectedDurationInMinutes\" : \"20\"\r\n            }\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54590/api/owner/services/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"services",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Add Owner",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PlatformPassword\": \"password12345\",\r\n    \"MobileBusinessFk\": \"18\",\r\n    \"Person\":\r\n    {\r\n      \"FullName\":\"Test T2r\" \r\n    },\r\n      \"Contact\" :\r\n      {\r\n            \"EmailAddress\" : {\r\n                \"Email\" : \"noel.tiscareno@hotmail.cyhom\",\r\n                \"EmailTypeCode\" : \"P\"\r\n            }\r\n      }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:54590/api/owner/platformuser/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "54590",
+					"path": [
+						"api",
+						"owner",
+						"platformuser",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Add Customer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJGNjRFNTA3MS1CRDk2LTQ3RkQtQUI5NC1FNzNEMDJCNTlBNUMiLCJ1bmlxdWVfbmFtZSI6ImVlcmVyZXJ3cndlckBnbWFpbC5jb20iLCJyb2xlIjoiT1dOIiwibmJmIjoxNjA4NjY3MjI3LCJleHAiOjE2MDg2NzA4MjcsImlhdCI6MTYwODY2NzIyNywiaXNzIjoiaHR0cHM6Ly9lbXByLmNvIiwiYXVkIjoiaHR0cHM6Ly9jb3Jlc2VydmljZXNkZXYuZW1wci5jby8ifQ.Q3KQ3U3mDlk67OLVLG4s8R_XnQkoC9VX6xpSjCZAwOlUB5buGGZ7er55NtOnCZmPW0nvVKGG1pWR-HKDsjN6Qw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"Ein\":\"NRT123456\",\r\n\r\n\"PartyBankAccount\":\r\n{\r\n    \"RoutingNumber\": \"123456789\",\r\n    \"AccountNumber\": \"123456789999\"\r\n},\r\n\r\n\"MobileBusinessPlatformSupportedFormOfPayment\":\r\n[{\r\n   \"PlatformSupportedFormOfPaymentFk\" : \"2\"\r\n},\r\n{\r\n   \"PlatformSupportedFormOfPaymentFk\" : \"1\"\r\n},\r\n{\r\n   \"PlatformSupportedFormOfPaymentFk\" : \"3\"\r\n}\r\n]\r\n\r\n    \r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44360/api/owner/bankaccount/update/22C0D189-FAC0-41E6-9CF4-FAA4D1A75C67",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44360",
+					"path": [
+						"api",
+						"owner",
+						"bankaccount",
+						"update",
+						"22C0D189-FAC0-41E6-9CF4-FAA4D1A75C67"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
