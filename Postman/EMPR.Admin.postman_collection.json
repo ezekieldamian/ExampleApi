@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "667fab74-8189-4519-bcca-5c699f50f0b7",
+		"name": "EMPR.Admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Health",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "image/jpeg",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/EzekielGallardo/Downloads/RN54OE8P191GZ2GLWDXUX8WMWSIQOWR2.jpg"
+						},
+						{
+							"key": "businessId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "businessName",
+							"value": "Test",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coreservicedevedge.empr.co/health",
+					"protocol": "https",
+					"host": [
+						"coreservicedevedge",
+						"empr",
+						"co"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET HealthCheck",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "image/jpeg",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/EzekielGallardo/Downloads/RN54OE8P191GZ2GLWDXUX8WMWSIQOWR2.jpg"
+						},
+						{
+							"key": "businessId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "businessName",
+							"value": "Test",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coreservicedevedge.empr.co/api/admin/healthcheck",
+					"protocol": "https",
+					"host": [
+						"coreservicedevedge",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"admin",
+						"healthcheck"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

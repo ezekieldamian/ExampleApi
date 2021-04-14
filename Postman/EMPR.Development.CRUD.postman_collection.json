@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "d6c364af-47b4-47b7-84b1-14e2f2b86671",
+		"name": "EMPR.Development.CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET All Businesses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/businesses/get/all",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"businesses",
+						"get",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Business by Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ea60bdbf-4be1-4b20-b454-7f3ec70f2495",
+						"exec": [
+							"\r",
+							"pm.test(\"The response has all properties\", () => {\r",
+							"    //parse the response json and test three properties\r",
+							"    const responseJson = pm.response.json();\r",
+							"    pm.expect(responseJson.type).to.eql('vip');\r",
+							"    pm.expect(responseJson.name).to.be.a('string');\r",
+							"    pm.expect(responseJson.id).to.have.lengthOf(1);\r",
+							"});\r",
+							"\r",
+							"[\r",
+							"    {\r",
+							"        \"id\": 11,\r",
+							"        \"name\": \"Krishna Rungta\",\r",
+							"        \"username\": \"Bret\",\r",
+							"        \"email\": \"Sincere@april.biz\",\r",
+							"        \"address\": {\r",
+							"            \"street\": \"Kulas Light\",\r",
+							"            \"suite\": \"Apt. 556\",\r",
+							"            \"city\": \"Gwenborough\",\r",
+							"            \"zipcode\": \"92998-3874\",\r",
+							"            \"geo\": {\r",
+							"                \"lat\": \"-37.3159\",\r",
+							"                \"lng\": \"81.1496\"\r",
+							"            }\r",
+							"        },\r",
+							"        \"phone\": \"1-770-736-8031 x56442\",\r",
+							"        \"website\": \"hildegard.org\",\r",
+							"        \"company\": {\r",
+							"            \"name\": \"Romaguera-Crona\",\r",
+							"            \"catchPhrase\": \"Multi-layered client-server neural-net\",\r",
+							"            \"bs\": \"harness real-time e-markets\"\r",
+							"        }\r",
+							"    }\r",
+							"]"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/businesses/get/5",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"businesses",
+						"get",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Business",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/businesses/delete/3",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"businesses",
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Edit Mobile Business",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"MobileBusinessId\": 33,\r\n    \"OwnerTitle\": \"Owner\",\r\n    \"DefaultTradeRadiusInMiles\": null,\r\n    \"OffersGoodsFlag\": \"N\",\r\n    \"OffersServicesFlag\": \"N\",\r\n    \"OffersAssetsFlag\": \"N\",\r\n    \"ShipsGoodsFlag\": \"N\",\r\n    \"AcceptsCreditCardFlag\": \"N\",\r\n    \"AcceptsAchFlag\": \"N\",\r\n    \"BusinessUrl\": null,\r\n    \"MobileBusinessNavigation\": {\r\n        \"OrganizationName\": \"Bob's Burgers\",\r\n        \"NonProfitFlag\": \"N\"                \r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/businesses/edit",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"businesses",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Add Create Mobile Business",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"OwnerTitle\": \"Owner\",\r\n    \"DefaultTradeRadiusInMiles\": null,\r\n    \"OffersGoodsFlag\": \"N\",\r\n    \"OffersServicesFlag\": \"N\",\r\n    \"OffersAssetsFlag\": \"N\",\r\n    \"ShipsGoodsFlag\": \"N\",\r\n    \"AcceptsCreditCardFlag\": \"N\",\r\n    \"AcceptsAchFlag\": \"N\",\r\n    \"BusinessUrl\": null,\r\n    \"MobileBusinessNavigation\": {\r\n        \"OrganizationName\": \"Bob's Burgers\",\r\n        \"NonProfitFlag\": \"N\"                \r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://coreservicesdev.empr.co/api/businesses/create",
+					"protocol": "https",
+					"host": [
+						"coreservicesdev",
+						"empr",
+						"co"
+					],
+					"path": [
+						"api",
+						"businesses",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
